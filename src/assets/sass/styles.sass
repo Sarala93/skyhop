@@ -1,0 +1,362 @@
+@import url('https://fonts.googleapis.com/css2?family=Jost:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap')
+
+*
+  margin: 0
+  padding: 0
+  box-sizing: border-box
+  font-family: 'Jost', sans-serif
+  border: none
+  outline: none
+  background: none
+  text-decoration: none
+  list-style: none
+
+$pri: #1D3E6B
+$sec: #E5A244
+$border: #d0d0d0
+$dark: #000000
+$light: #FFFFFF
+$para: #08243E
+
+@mixin flex($justify)
+  display: flex
+  justify-content: $justify
+  align-items: center
+
+@mixin grid($columns)
+  display: grid
+  grid-template-columns: $columns
+  grid-gap: 20px
+
+@mixin image()
+  background-position: center
+  background-size: cover
+  background-repeat: no-repeat
+
+@mixin dark($opacity)
+  position: absolute
+  left: 0
+  top: 0
+  bottom: 0
+  right: 0
+  background-color: rgba($black, $opacity)
+  pointer-events: none
+
+@mixin shrinkLabel()
+  top: -12px
+  left: 5px
+  transform: translateY(-50%) scale(.8)
+
+// @mixin btnHover()
+//   transform: scale(1.02) translateY(-1px)
+//   background-color: #DA5B64
+//   box-shadow: 0 0 4px rgba(#DA5B64, .2)
+
+@mixin trans()
+  transition: all .5s cubic-bezier(0,1,0,1)
+
+body
+  background-color: #e6e6e6
+  color: $para
+
+.app
+  height: 100%
+  width: 100%
+
+.home-page
+  height: 100%
+  width: 100%
+  position: relative
+  @include flex($justify: center)
+
+  .popup
+    position: relative
+    max-width: 1000px
+    height: 100%
+    width: 100%
+    z-index: 10
+    background-color: #fff
+    padding: 2rem
+    border-radius: 20px
+    margin: 2rem 0
+
+    .inner-details
+      max-width: 850px
+      margin: 0 auto
+
+    .close-button
+      position: absolute
+      top: 20px
+      left: 20px
+      height: 30px
+      width: 30px
+      border-radius: 10px
+      background-color: $pri
+      @include flex($justify: center)
+
+      svg
+        height: 25px
+        width: 25px
+
+    .title-sec
+      @include flex($justify: center)
+      margin-bottom: 2rem
+
+    .title
+      font-size: 26px
+      font-weight: 500
+      padding-bottom: 10px
+      border-bottom: 1px solid $border
+      display: inline-block
+      text-align: center
+
+    .sub-title
+      font-size: 14px
+      font-weight: 600
+      margin-bottom: .5rem
+
+.custom-button
+  text-align: center
+
+  button
+    padding: .4rem 2rem
+    font-size: 13px
+    font-weight: 600
+    background-color: $pri
+    color: $light
+    border-radius: 4px
+    text-align: center
+    cursor: pointer
+
+    &:hover
+      opacity: .8
+
+.form-select
+  padding: .3rem .4rem
+  width: 100%
+  border: 1px solid $border
+  border-radius: 7px
+
+  select
+    font-weight: 600
+    font-size: 13px
+    color: $pri
+    width: 100%
+
+.das
+  height: 1px
+  width: 200px
+  background-color: $border
+  margin: 1rem 0
+
+.drag-and-drop
+  padding-bottom: 1rem
+  border-bottom: 1px solid $border
+
+  .file-drag
+
+    .image-view-area
+
+      .upload-image
+        overflow: hidden
+        width: 100%
+        object-fit: cover
+
+  .drag-and-drop-area
+    border: 1px solid $border
+    padding: .7rem
+    border-radius: 10px
+
+    .drop-area
+      padding: 1rem
+      border: 1px dashed $border
+      border-radius: 10px
+      min-height: 120px
+      @include flex($justify: center)
+      margin-bottom: .7rem
+
+      .content
+        @include flex($justify: center)
+        flex-direction: column
+
+        p
+          font-size: 13px
+
+.uploading-file
+  margin-top: 1rem
+  @include flex($justify: flex-start)
+  padding: 0 .5rem
+  width: 100%
+
+  .file-info
+    width: 100%
+    @include flex($justify: space-between)
+
+    .file-name
+      font-size: 14px
+      color: #414141
+      margin-left: 10px
+      max-width: 300px
+      overflow: auto
+
+    .file-size
+      font-size: 11px
+      font-weight: 600
+      color: #414141
+
+.sections
+  @include grid($columns: 1.4fr 1fr)
+  grid-gap: 50px
+
+.elapse-data
+  .elapse-data-list
+    color: #0E9E59
+    font-size: 13px
+
+.tolerance-window
+  .switch
+    .switch-btn
+      @include flex(flex-start)
+      font-size: 13px
+      font-weight: 400
+      color: $pri
+
+      .toggle-switch
+        height: 20px
+        width: 40px
+        border-radius: 50px
+        background-color: #b0b0b0
+        margin-right: 10px
+        position: relative
+        overflow: hidden
+        transition: .4s
+        cursor: pointer
+
+        &.active
+          background-color: $pri
+          &::before
+            left: 22px
+
+        &::before
+          content: ''
+          position: absolute
+          left: 2px
+          top: 50%
+          transform: translateY(-50%)
+          height: 16px
+          width: 16px
+          border-radius: 50%
+          background-color: $light
+          transition: .4s
+
+      .h_das
+        height: 20px
+        width: 1.5px
+        background-color: $pri
+        margin: 0 .1rem 0 .6rem
+
+      .icon
+        height: 35px
+        width: 35px
+        @include flex($justify: center)
+
+        svg
+          height: 100%
+          width: 100%
+
+.right-section
+  .das
+    width: 80%
+
+.options
+  @include flex($justify: flex-start)
+
+  .yes-no-btn
+    @include flex($justify: flex-start)
+    font-size: 13px
+    font-weight: 400
+    margin-right: 10px
+    cursor: pointer
+
+    .radio-btn
+      height: 18px
+      width: 18px
+      border-radius: 50%
+      border: 1.5px solid $pri
+      margin-right: 5px
+      position: relative
+
+      &.active
+        &::before
+          height: 10px
+          width: 10px
+
+      &::before
+        content: ''
+        position: absolute
+        left: 50%
+        top: 50%
+        transform: translate(-50%, -50%)
+        height: 0
+        width: 0
+        border-radius: 10px
+        background-color: $pri
+        transition: all .5s cubic-bezier(0.77, 0, 0.175, 1)
+
+.testing-list
+  margin-top: 1rem
+
+  ul
+    li
+      @include flex($justify: space-between)
+      margin-bottom: 1rem
+
+      .name
+        font-size: 13px
+        width: 40%
+
+      .select-area
+        @include flex($justify: flex-end)
+        width: 60%
+
+      .form-select
+        width: 80%
+
+        select
+          font-size: 13px
+          font-weight: 400
+
+      .icon
+        height: 35px
+        width: 35px
+        @include flex($justify: center)
+
+        svg
+          height: 100%
+          width: 100%
+
+.footer
+  margin-top: 1rem
+
+  .note
+    font-size: 16px
+    font-weight: 600
+    margin-bottom: .5rem
+    text-align: center
+
+  .btn-group
+    @include flex($justify: center)
+
+    .custom-button
+      margin: 0 5px
+
+      &:nth-child(2)
+        button
+          color: $sec
+          border: 2px solid $sec
+          background: none
+
+      button
+        width: 200px
+        font-size: 12px
+        padding: .6rem

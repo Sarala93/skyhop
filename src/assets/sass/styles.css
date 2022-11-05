@@ -1,0 +1,499 @@
+@import url("https://fonts.googleapis.com/css2?family=Jost:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap");
+* {
+  margin: 0;
+  padding: 0;
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+  font-family: 'Jost', sans-serif;
+  border: none;
+  outline: none;
+  background: none;
+  text-decoration: none;
+  list-style: none;
+}
+
+body {
+  background-color: #e6e6e6;
+  color: #08243E;
+}
+
+.app {
+  height: 100%;
+  width: 100%;
+}
+
+.home-page {
+  height: 100%;
+  width: 100%;
+  position: relative;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+.home-page .popup {
+  position: relative;
+  max-width: 1000px;
+  height: 100%;
+  width: 100%;
+  z-index: 10;
+  background-color: #fff;
+  padding: 2rem;
+  border-radius: 20px;
+  margin: 2rem 0;
+}
+
+.home-page .popup .inner-details {
+  max-width: 850px;
+  margin: 0 auto;
+}
+
+.home-page .popup .close-button {
+  position: absolute;
+  top: 20px;
+  left: 20px;
+  height: 30px;
+  width: 30px;
+  border-radius: 10px;
+  background-color: #1D3E6B;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+.home-page .popup .close-button svg {
+  height: 25px;
+  width: 25px;
+}
+
+.home-page .popup .title-sec {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  margin-bottom: 2rem;
+}
+
+.home-page .popup .title {
+  font-size: 26px;
+  font-weight: 500;
+  padding-bottom: 10px;
+  border-bottom: 1px solid #d0d0d0;
+  display: inline-block;
+  text-align: center;
+}
+
+.home-page .popup .sub-title {
+  font-size: 14px;
+  font-weight: 600;
+  margin-bottom: .5rem;
+}
+
+.custom-button {
+  text-align: center;
+}
+
+.custom-button button {
+  padding: .4rem 2rem;
+  font-size: 13px;
+  font-weight: 600;
+  background-color: #1D3E6B;
+  color: #FFFFFF;
+  border-radius: 4px;
+  text-align: center;
+  cursor: pointer;
+}
+
+.custom-button button:hover {
+  opacity: .8;
+}
+
+.form-select {
+  padding: .3rem .4rem;
+  width: 100%;
+  border: 1px solid #d0d0d0;
+  border-radius: 7px;
+}
+
+.form-select select {
+  font-weight: 600;
+  font-size: 13px;
+  color: #1D3E6B;
+  width: 100%;
+}
+
+.das {
+  height: 1px;
+  width: 200px;
+  background-color: #d0d0d0;
+  margin: 1rem 0;
+}
+
+.drag-and-drop {
+  padding-bottom: 1rem;
+  border-bottom: 1px solid #d0d0d0;
+}
+
+.drag-and-drop .file-drag .image-view-area .upload-image {
+  overflow: hidden;
+  width: 100%;
+  -o-object-fit: cover;
+     object-fit: cover;
+}
+
+.drag-and-drop .drag-and-drop-area {
+  border: 1px solid #d0d0d0;
+  padding: .7rem;
+  border-radius: 10px;
+}
+
+.drag-and-drop .drag-and-drop-area .drop-area {
+  padding: 1rem;
+  border: 1px dashed #d0d0d0;
+  border-radius: 10px;
+  min-height: 120px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  margin-bottom: .7rem;
+}
+
+.drag-and-drop .drag-and-drop-area .drop-area .content {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+}
+
+.drag-and-drop .drag-and-drop-area .drop-area .content p {
+  font-size: 13px;
+}
+
+.uploading-file {
+  margin-top: 1rem;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: start;
+      -ms-flex-pack: start;
+          justify-content: flex-start;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  padding: 0 .5rem;
+  width: 100%;
+}
+
+.uploading-file .file-info {
+  width: 100%;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+.uploading-file .file-info .file-name {
+  font-size: 14px;
+  color: #414141;
+  margin-left: 10px;
+  max-width: 300px;
+  overflow: auto;
+}
+
+.uploading-file .file-info .file-size {
+  font-size: 11px;
+  font-weight: 600;
+  color: #414141;
+}
+
+.sections {
+  display: -ms-grid;
+  display: grid;
+  -ms-grid-columns: 1.4fr 1fr;
+      grid-template-columns: 1.4fr 1fr;
+  grid-gap: 20px;
+  grid-gap: 50px;
+}
+
+.elapse-data .elapse-data-list {
+  color: #0E9E59;
+  font-size: 13px;
+}
+
+.tolerance-window .switch .switch-btn {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: start;
+      -ms-flex-pack: start;
+          justify-content: flex-start;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  font-size: 13px;
+  font-weight: 400;
+  color: #1D3E6B;
+}
+
+.tolerance-window .switch .switch-btn .toggle-switch {
+  height: 20px;
+  width: 40px;
+  border-radius: 50px;
+  background-color: #b0b0b0;
+  margin-right: 10px;
+  position: relative;
+  overflow: hidden;
+  -webkit-transition: .4s;
+  transition: .4s;
+  cursor: pointer;
+}
+
+.tolerance-window .switch .switch-btn .toggle-switch.active {
+  background-color: #1D3E6B;
+}
+
+.tolerance-window .switch .switch-btn .toggle-switch.active::before {
+  left: 22px;
+}
+
+.tolerance-window .switch .switch-btn .toggle-switch::before {
+  content: '';
+  position: absolute;
+  left: 2px;
+  top: 50%;
+  -webkit-transform: translateY(-50%);
+          transform: translateY(-50%);
+  height: 16px;
+  width: 16px;
+  border-radius: 50%;
+  background-color: #FFFFFF;
+  -webkit-transition: .4s;
+  transition: .4s;
+}
+
+.tolerance-window .switch .switch-btn .h_das {
+  height: 20px;
+  width: 1.5px;
+  background-color: #1D3E6B;
+  margin: 0 .1rem 0 .6rem;
+}
+
+.tolerance-window .switch .switch-btn .icon {
+  height: 35px;
+  width: 35px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+.tolerance-window .switch .switch-btn .icon svg {
+  height: 100%;
+  width: 100%;
+}
+
+.right-section .das {
+  width: 80%;
+}
+
+.options {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: start;
+      -ms-flex-pack: start;
+          justify-content: flex-start;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+.options .yes-no-btn {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: start;
+      -ms-flex-pack: start;
+          justify-content: flex-start;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  font-size: 13px;
+  font-weight: 400;
+  margin-right: 10px;
+  cursor: pointer;
+}
+
+.options .yes-no-btn .radio-btn {
+  height: 18px;
+  width: 18px;
+  border-radius: 50%;
+  border: 1.5px solid #1D3E6B;
+  margin-right: 5px;
+  position: relative;
+}
+
+.options .yes-no-btn .radio-btn.active::before {
+  height: 10px;
+  width: 10px;
+}
+
+.options .yes-no-btn .radio-btn::before {
+  content: '';
+  position: absolute;
+  left: 50%;
+  top: 50%;
+  -webkit-transform: translate(-50%, -50%);
+          transform: translate(-50%, -50%);
+  height: 0;
+  width: 0;
+  border-radius: 10px;
+  background-color: #1D3E6B;
+  -webkit-transition: all 0.5s cubic-bezier(0.77, 0, 0.175, 1);
+  transition: all 0.5s cubic-bezier(0.77, 0, 0.175, 1);
+}
+
+.testing-list {
+  margin-top: 1rem;
+}
+
+.testing-list ul li {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  margin-bottom: 1rem;
+}
+
+.testing-list ul li .name {
+  font-size: 13px;
+  width: 40%;
+}
+
+.testing-list ul li .select-area {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: end;
+      -ms-flex-pack: end;
+          justify-content: flex-end;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  width: 60%;
+}
+
+.testing-list ul li .form-select {
+  width: 80%;
+}
+
+.testing-list ul li .form-select select {
+  font-size: 13px;
+  font-weight: 400;
+}
+
+.testing-list ul li .icon {
+  height: 35px;
+  width: 35px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+.testing-list ul li .icon svg {
+  height: 100%;
+  width: 100%;
+}
+
+.footer {
+  margin-top: 1rem;
+}
+
+.footer .note {
+  font-size: 16px;
+  font-weight: 600;
+  margin-bottom: .5rem;
+  text-align: center;
+}
+
+.footer .btn-group {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+.footer .btn-group .custom-button {
+  margin: 0 5px;
+}
+
+.footer .btn-group .custom-button:nth-child(2) button {
+  color: #E5A244;
+  border: 2px solid #E5A244;
+  background: none;
+}
+
+.footer .btn-group .custom-button button {
+  width: 200px;
+  font-size: 12px;
+  padding: .6rem;
+}
+/*# sourceMappingURL=styles.css.map */
